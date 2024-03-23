@@ -1,4 +1,5 @@
-﻿using CodeBase.Infrastructure.Scene;
+﻿using CodeBase.Infrastructure.Factory;
+using CodeBase.Infrastructure.Scene;
 using CodeBase.UI;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace CodeBase.Infrastructure.States
     private readonly SceneLoader _sceneLoader;
     private readonly GameStateMachine _stateMachine;
     private readonly LoadingCurtain _curtain;
+    private readonly GameFactory _gameFactory;
 
     public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCurtain curtain)
     {
@@ -34,32 +36,10 @@ namespace CodeBase.Infrastructure.States
     {
       var initialPoint = GameObject.FindWithTag(InitialPointTag);
       
-      GameObject hero = CreateHero(initialPoint);
-      CreateHud();
+      GameObject hero = _gameFactory.CreateHero(initialPoint);
+      _gameFactory.CreateHud();
       
       _stateMachine.Enter<GameLoopState>();
-    }
-
-    public GameObject CreateHud()
-    {
-      return Instantiate("Hud/Hud");
-    }
-
-    public GameObject CreateHero(GameObject initialPoint)
-    {
-      return Instantiate("Hero/Hero", at: initialPoint.transform.position);
-    }
-
-    private GameObject Instantiate(string heroHero)
-    {
-      var heroPrefab = Resources.Load<GameObject>(heroHero);
-      return Object.Instantiate(heroPrefab);
-    }
-
-    public GameObject Instantiate(string heroHero, Vector3 at)
-    {
-      var heroPrefab = Resources.Load<GameObject>(heroHero);
-      return Object.Instantiate(heroPrefab, at, Quaternion.identity);
     }
   }
 }
