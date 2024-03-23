@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  currentHealth: 8
+  currentHealth: 6
   maxMana: 5
   currentMana: 0
 --- !u!1 &8256275416783384089
