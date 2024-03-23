@@ -5,22 +5,17 @@ namespace CodeBase.Infrastructure.Factory
 {
   public class GameFactory
   {
-    public GameObject CreateHero(GameObject initialPoint) => 
-      Instantiate(AssetPath.Hero, at: initialPoint.transform.position);
+    private readonly AssetProvider _assetProvider;
+
+    public GameFactory(AssetProvider assetProvider)
+    {
+      _assetProvider = assetProvider;
+    }
+
+    public GameObject CreateHero(GameObject initialPoint) =>
+      _assetProvider.Instantiate(AssetPath.Hero, at: initialPoint.transform.position);
 
     public GameObject CreateHud() => 
-      Instantiate(AssetPath.Hud);
-
-    public GameObject Instantiate(string heroHero, Vector3 at)
-    {
-      var heroPrefab = Resources.Load<GameObject>(heroHero);
-      return Object.Instantiate(heroPrefab, at, Quaternion.identity);
-    }
-
-    public GameObject Instantiate(string heroHero)
-    {
-      var heroPrefab = Resources.Load<GameObject>(heroHero);
-      return Object.Instantiate(heroPrefab);
-    }
+      _assetProvider.Instantiate(AssetPath.Hud);
   }
 }
