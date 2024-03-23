@@ -1,6 +1,6 @@
 ﻿using CodeBase.Infrastructure.Bootstrap;
 using CodeBase.Infrastructure.Services.Scene;
-using CodeBase.Infrastructure.Services.States;
+using CodeBase.Infrastructure.States;
 using CodeBase.UI;
 
 namespace CodeBase.Infrastructure
