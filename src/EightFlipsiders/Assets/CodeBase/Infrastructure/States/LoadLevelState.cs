@@ -9,18 +9,21 @@ namespace CodeBase.Infrastructure.States
   public class LoadLevelState : IState
   {
     private const string InitialPointTag = "InitialPoint";
+
+    private CameraFollow _camera;
     
     private readonly SceneLoader _sceneLoader;
     private readonly GameStateMachine _stateMachine;
     private readonly LoadingCurtain _curtain;
-    private readonly GameFactory _gameFactory;
-    private CameraFollow _camera;
-
-    public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCurtain curtain)
+    private readonly IGameFactory _gameFactory;
+    
+    public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCurtain curtain, 
+      IGameFactory gameFactory)
     {
       _sceneLoader = sceneLoader;
       _stateMachine = stateMachine;
       _curtain = curtain;
+      _gameFactory = gameFactory;
     }
 
     public void Enter()
