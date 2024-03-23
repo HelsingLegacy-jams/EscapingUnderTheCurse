@@ -13,6 +13,7 @@ namespace CodeBase.Infrastructure.Bootstrap
     private void Awake()
     {
       _game = new Game(this, Curtain);
+
       _game.StateMachine.Enter<BootstrapState>();
       
       DontDestroyOnLoad(gameObject);
