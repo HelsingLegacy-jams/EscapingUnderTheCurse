@@ -1,0 +1,25 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+src/EightFlipsiders/.vs
+
+src/EightFlipsiders/Temp
+
+src/EightFlipsiders/Library
+src/EightFlipsiders/.idea
+.idea/
+src/EightFlipsiders/Assembly-CSharp.csproj
+src/EightFlipsiders/Assembly-CSharp-Editor.csproj
+src/EightFlipsiders/EightFlipsiders.sln
+src/EightFlipsiders/EightFlipsiders.csproj
+src/EightFlipsiders/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
+
+src/EightFlipsiders/obj
+
+.vs
+/builds
+src/EightFlipsiders/Assets/Plugins/Editor/JetBrains
+
+*.csproj
+
+# Build related
+Cake/tools/**
+Cake/!tools/packages.config
