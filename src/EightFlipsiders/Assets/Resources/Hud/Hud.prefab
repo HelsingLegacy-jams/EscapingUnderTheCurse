@@ -46,6 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3912790970876692508}
   - component: {fileID: 2850320139393566151}
+  - component: {fileID: 3386824110648123469}
   m_Layer: 5
   m_Name: Mana
   m_TagString: Untagged
@@ -125,6 +126,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3386824110648123469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919302592301470159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8597fff8ec5c044933e478871a3240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaBar: {fileID: 7375408121145192400}
+  fillImage: {fileID: 6101086422539323624}
 --- !u!1 &1991371319182776015
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,8 +150,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1970096556682741686}
   - component: {fileID: 6289715427905423059}
+  - component: {fileID: 1056886674348996378}
   m_Layer: 5
-  m_Name: Health
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,6 +230,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1056886674348996378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991371319182776015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f223921133cad5549b2d4f02278bd072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 7375408121145192400}
+  fillImage: {fileID: 7054266465217114069}
 --- !u!1 &4298929672071455731
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +517,7 @@ GameObject:
   - component: {fileID: 1847150675845460458}
   - component: {fileID: 6107560243485179140}
   - component: {fileID: 3404017659946143594}
+  - component: {fileID: 7375408121145192400}
   m_Layer: 5
   m_Name: Hud
   m_TagString: Untagged
@@ -578,6 +609,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7375408121145192400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181358398396276942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df3c93d684fab44089021f7a856ba62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 8
+  maxMana: 5
+  currentMana: 0
 --- !u!1 &8256275416783384089
 GameObject:
   m_ObjectHideFlags: 0
