@@ -1,4 +1,5 @@
-﻿using CodeBase.Infrastructure.Factory;
+﻿using CodeBase.CameraLogic;
+using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Scene;
 using CodeBase.UI;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace CodeBase.Infrastructure.States
     private readonly GameStateMachine _stateMachine;
     private readonly LoadingCurtain _curtain;
     private readonly GameFactory _gameFactory;
+    private CameraFollow _camera;
 
     public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCurtain curtain)
     {
@@ -38,6 +40,9 @@ namespace CodeBase.Infrastructure.States
       
       GameObject hero = _gameFactory.CreateHero(initialPoint);
       _gameFactory.CreateHud();
+
+      _camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>();
+      _camera.Follow(hero);
       
       _stateMachine.Enter<GameLoopState>();
     }
