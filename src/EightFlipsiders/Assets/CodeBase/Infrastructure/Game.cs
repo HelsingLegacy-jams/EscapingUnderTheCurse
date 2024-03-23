@@ -1,5 +1,5 @@
 ﻿using CodeBase.Infrastructure.Bootstrap;
-using CodeBase.Infrastructure.Services.Scene;
+using CodeBase.Infrastructure.Scene;
 using CodeBase.Infrastructure.States;
 using CodeBase.UI;
 

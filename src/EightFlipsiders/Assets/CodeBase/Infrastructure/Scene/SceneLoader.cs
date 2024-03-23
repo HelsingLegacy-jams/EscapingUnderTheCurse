@@ -4,7 +4,7 @@ using CodeBase.Infrastructure.Bootstrap;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace CodeBase.Infrastructure.Services.Scene
+namespace CodeBase.Infrastructure.Scene
 {
   public class SceneLoader
   {

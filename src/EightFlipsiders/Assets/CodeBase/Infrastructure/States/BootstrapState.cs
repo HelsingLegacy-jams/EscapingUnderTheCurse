@@ -1,4 +1,4 @@
-﻿using CodeBase.Infrastructure.Services.Scene;
+﻿using CodeBase.Infrastructure.Scene;
 
 namespace CodeBase.Infrastructure.States
 {
