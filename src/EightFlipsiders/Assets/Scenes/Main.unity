@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71488905dba044dabbbcd657631add7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Distance: 25
   _folliwing: {fileID: 0}
 --- !u!1001 &600445371
 PrefabInstance:

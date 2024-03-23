@@ -4,6 +4,8 @@ namespace CodeBase.CameraLogic
 {
   public class CameraFollow : MonoBehaviour
   {
+    public float Distance;
+    
     [SerializeField] private Transform _folliwing;
 
     private void LateUpdate()
@@ -12,7 +14,7 @@ namespace CodeBase.CameraLogic
         return;
 
       var position = _folliwing.position;
-      position.z -= 15;
+      position.z -= Distance;
 
       transform.position = position;
     }
