@@ -12,7 +12,7 @@ namespace CodeBase.CameraLogic
         return;
 
       var position = _folliwing.position;
-      position.z += 35;
+      position.z -= 15;
 
       transform.position = position;
     }
