@@ -1,5 +1,5 @@
-using CodeBase.Infrastructure.Services.States;
 using CodeBase.UI;
+using CodeBase.Infrastructure.States;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.Bootstrap
@@ -13,6 +13,7 @@ namespace CodeBase.Infrastructure.Bootstrap
     private void Awake()
     {
       _game = new Game(this, Curtain);
+
       _game.StateMachine.Enter<BootstrapState>();
       
       DontDestroyOnLoad(gameObject);

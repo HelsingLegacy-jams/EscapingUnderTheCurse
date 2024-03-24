@@ -1,6 +1,7 @@
 ﻿using CodeBase.Infrastructure.Bootstrap;
-using CodeBase.Infrastructure.Services.Scene;
-using CodeBase.Infrastructure.Services.States;
+using CodeBase.Infrastructure.Scene;
+using CodeBase.Infrastructure.Services;
+using CodeBase.Infrastructure.States;
 using CodeBase.UI;
 
 namespace CodeBase.Infrastructure
@@ -11,7 +12,7 @@ namespace CodeBase.Infrastructure
 
     public Game(ICoroutineRunner coroutineRunner, LoadingCurtain curtain)
     {
-      StateMachine = new GameStateMachine(new SceneLoader(coroutineRunner), curtain);
+      StateMachine = new GameStateMachine(new SceneLoader(coroutineRunner), curtain, AllServices.Container);
     }
   }
 }

@@ -2,8 +2,11 @@
 src/EightFlipsiders/.vs
 
 src/EightFlipsiders/Temp
+src/EightFlipsiders/Logs
+src/EightFlipsiders/UserSettings
 
 src/EightFlipsiders/Library
+src/EightFlipsiders/.vscode
 src/EightFlipsiders/.idea
 .idea/
 src/EightFlipsiders/Assembly-CSharp.csproj
