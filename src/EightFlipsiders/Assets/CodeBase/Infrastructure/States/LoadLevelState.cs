@@ -49,7 +49,7 @@ namespace CodeBase.Infrastructure.States
 
       _camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>();
       _camera.Follow(hero);
-      
+
       _injector.InjectTimer();
       
       _stateMachine.Enter<GameLoopState>();

@@ -4,6 +4,7 @@ using CodeBase.Infrastructure.DIContainer;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Injector;
 using CodeBase.Infrastructure.Scene;
+using CodeBase.Infrastructure.Services;
 using CodeBase.UI;
 
 namespace CodeBase.Infrastructure.States
@@ -18,6 +19,7 @@ namespace CodeBase.Infrastructure.States
       _states = new Dictionary<Type, IState>()
       {
         [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, services),
+
         [typeof(LoadLevelState)] = new LoadLevelState
         (
           this, sceneLoader, curtain, services.Single<IGameFactory>(), services.Single<IInjectionService>()

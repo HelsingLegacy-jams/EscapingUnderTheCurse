@@ -1,4 +1,4 @@
-﻿using CodeBase.Infrastructure.Countdown;
+using CodeBase.Infrastructure.Countdown;
 using CodeBase.Infrastructure.DIContainer;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Injector;
