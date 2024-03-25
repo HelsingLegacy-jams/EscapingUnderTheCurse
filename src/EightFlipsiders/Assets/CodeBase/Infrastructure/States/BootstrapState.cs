@@ -3,8 +3,6 @@ using CodeBase.Infrastructure.DIContainer;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Injector;
 using CodeBase.Infrastructure.Scene;
-using CodeBase.Infrastructure.Services;
-
 
 namespace CodeBase.Infrastructure.States
 {

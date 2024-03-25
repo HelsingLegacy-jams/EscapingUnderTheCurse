@@ -1,4 +1,4 @@
-﻿using CodeBase.Infrastructure.Services;
+﻿using CodeBase.Infrastructure.DIContainer;
 
 using UnityEngine;
 
