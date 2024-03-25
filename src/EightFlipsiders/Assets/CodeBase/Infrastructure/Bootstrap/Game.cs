@@ -1,10 +1,9 @@
-﻿using CodeBase.Infrastructure.Bootstrap;
+﻿using CodeBase.Infrastructure.DIContainer;
 using CodeBase.Infrastructure.Scene;
-using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.States;
 using CodeBase.UI;
 
-namespace CodeBase.Infrastructure
+namespace CodeBase.Infrastructure.Bootstrap
 {
   public class Game
   {

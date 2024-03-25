@@ -15,12 +15,12 @@ TagManager:
   - 
   - 
   - 
+  - Player
+  - Triggers
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Environment
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Gameplay
+    uniqueID: 2707057707
     locked: 0
