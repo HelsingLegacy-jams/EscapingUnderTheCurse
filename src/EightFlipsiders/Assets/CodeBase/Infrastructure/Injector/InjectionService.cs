@@ -17,7 +17,7 @@ namespace CodeBase.Infrastructure.Injector
 
     public void InjectTimer()
     {
-      TimerTrigger[] triggers = Object.FindObjectsOfType<TimerTrigger>();
+      TriggerBase[] triggers = Object.FindObjectsOfType<TriggerBase>();
       CountdownTimer[] countdowns = Object.FindObjectsOfType<CountdownTimer>();
 
       InjectTo(triggers);

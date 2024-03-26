@@ -5,10 +5,11 @@ using UnityEngine;
 
 namespace CodeBase.Triggers
 {
-  public class TimerTrigger : MonoBehaviour, ITimerProvider
+  public class TriggerBase : MonoBehaviour, ITimerProvider
   {
     public float Duration;
     public MovingDirection MovingDirection;
+    public UnderlingBase Underling;
     
     private ITimer _timer;
 
@@ -17,15 +18,16 @@ namespace CodeBase.Triggers
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-      // if (other.GetComponentInParent<HeroMove>().Direction == MovingDirection)
-        if (!_timer.IsCountdown)
-          _timer.SetTimer(Duration);
+      // Coroutine to hide obstacle
+      // Coroutine to stop Hero moving for the time until obstacle will be hided
+      if (!_timer.IsCountdown)
+        _timer.SetTimer(Duration);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-      // if (other.GetComponentInParent<HeroMove>().Direction == MovingDirection) 
-        _timer.StartCountdown();
+      
+      _timer.StartCountdown();
     }
   }
 }
