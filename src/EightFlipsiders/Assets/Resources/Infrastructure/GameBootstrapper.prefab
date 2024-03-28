@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab7a960a6d4a344b8018350f648a72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurtainPrefab: {fileID: -8107983631799515082, guid: 5a64362512410bd48ae7bd312365986f, type: 3}
 --- !u!1 &8288940350915020239
 GameObject:
   m_ObjectHideFlags: 0

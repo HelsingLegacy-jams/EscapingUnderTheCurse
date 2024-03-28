@@ -1,4 +1,5 @@
-﻿using CodeBase.Infrastructure.Services;
+﻿using CodeBase.Infrastructure.DIContainer;
+
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.Factory

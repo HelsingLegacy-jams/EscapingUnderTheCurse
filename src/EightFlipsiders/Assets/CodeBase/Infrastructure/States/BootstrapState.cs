@@ -1,6 +1,8 @@
-﻿using CodeBase.Infrastructure.Factory;
+using CodeBase.Infrastructure.Countdown;
+using CodeBase.Infrastructure.DIContainer;
+using CodeBase.Infrastructure.Factory;
+using CodeBase.Infrastructure.Injector;
 using CodeBase.Infrastructure.Scene;
-using CodeBase.Infrastructure.Services;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -26,6 +28,8 @@ namespace CodeBase.Infrastructure.States
 
     private void RegisterServices()
     {
+      _services.RegisterSingle<ITimer>(new TimerService());
+      _services.RegisterSingle<IInjectionService>(new InjectionService(_services.Single<ITimer>()));
       _services.RegisterSingle<IAssets>(new AssetProvider());
       _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssets>()));
     }
