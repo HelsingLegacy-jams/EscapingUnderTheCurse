@@ -521,6 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Duration: 3
   MovingDirection: 1
+  Underling: {fileID: 0}
 --- !u!50 &307292783
 Rigidbody2D:
   serializedVersion: 4
