@@ -65,5 +65,17 @@ namespace CodeBase.Hero
 
     public void SwitchOff() => 
       enabled = false;
+
+    public void ChangeDirectionTo(MovingDirection direction)
+    {
+      Direction = direction;
+      
+      if(Direction == MovingDirection.Right)
+        transform.localScale = new Vector3(1f, 1f, 1f);
+      
+      if (Direction == MovingDirection.Left) 
+        transform.localScale = new Vector3(-1f, 1f, 1f);
+      
+    }
   }
 }

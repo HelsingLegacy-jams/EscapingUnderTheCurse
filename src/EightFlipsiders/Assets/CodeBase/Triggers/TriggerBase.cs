@@ -9,7 +9,7 @@ namespace CodeBase.Triggers
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-      other.GetComponent<HeroMove>().Direction = Direction;
+      other.GetComponent<HeroMove>().ChangeDirectionTo(Direction);
     }
   }
 }
