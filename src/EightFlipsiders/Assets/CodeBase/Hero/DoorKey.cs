@@ -9,6 +9,7 @@ namespace CodeBase.Hero
     private void OnTriggerEnter2D(Collider2D other)
     {
       Doors.Open();
+      Destroy(gameObject);
     }
   }
 }
