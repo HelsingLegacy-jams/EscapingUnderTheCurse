@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - InitialPoint
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -13,17 +15,17 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Save
+  - GroundChecker
+  - Player
+  - Triggers
+  - Potions
+  - Enemy
+  - Ground
+  - Environment
+  - EnemyAttackActivator
+  - EnemyGrounded
+  - Killer
   - 
   - 
   - 
@@ -41,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Gameplay
+    uniqueID: 2707057707
     locked: 0
