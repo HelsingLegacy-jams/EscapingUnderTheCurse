@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Hero
+﻿namespace Code.Features.Movement
 {
   public enum MovingDirection
   {

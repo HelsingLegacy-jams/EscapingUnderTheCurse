@@ -1,4 +1,5 @@
-﻿using CodeBase.Hero;
+﻿using Code.Features.Movement;
+using CodeBase.Hero;
 using UnityEngine;
 
 namespace CodeBase.Triggers
