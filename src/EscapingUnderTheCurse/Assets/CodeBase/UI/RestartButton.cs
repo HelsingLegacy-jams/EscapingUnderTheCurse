@@ -1,5 +1,4 @@
 ﻿using Code.Infrastructure.States;
-using CodeBase.Infrastructure.Bootstrap;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -17,7 +16,7 @@ namespace CodeBase.UI
       if (_stateMachine != null)
         return;
 
-      _stateMachine = FindObjectOfType<GameBootstrapper>().StateMachine();
+      // _stateMachine = FindObjectOfType<GameBootstrapper>().StateMachine();
     }
   }
 }

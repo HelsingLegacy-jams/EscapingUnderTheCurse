@@ -13,9 +13,9 @@ namespace Code.Infrastructure.States
     private readonly GameStateMachine _stateMachine;
     private readonly IPersistentProgressService _progressService;
     private readonly ISaveLoadService _saveLoadService;
-    private readonly SceneLoader _sceneLoader;
+    private readonly ISceneLoader _sceneLoader;
 
-    public LoadProgressState(GameStateMachine stateMachine, SceneLoader sceneLoader,
+    public LoadProgressState(GameStateMachine stateMachine, ISceneLoader sceneLoader,
       LoadingCurtain curtain, IPersistentProgressService progressService, ISaveLoadService saveLoadService)
     {
       _stateMachine = stateMachine;
