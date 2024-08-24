@@ -1,7 +1,6 @@
-﻿using CodeBase.Infrastructure.DIContainer;
-using CodeBase.Infrastructure.Scene;
-
-using CodeBase.Infrastructure.States;
+﻿using Code.Infrastructure.Scenes;
+using Code.Infrastructure.States;
+using CodeBase.Infrastructure.DIContainer;
 using CodeBase.UI;
 
 namespace CodeBase.Infrastructure.Bootstrap

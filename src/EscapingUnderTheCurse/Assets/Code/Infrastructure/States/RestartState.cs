@@ -1,8 +1,8 @@
-﻿using CodeBase.Infrastructure.Scene;
+﻿using Code.Infrastructure.Scenes;
 using CodeBase.UI;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.States
+namespace Code.Infrastructure.States
 {
   public class RestartState : IState
   {

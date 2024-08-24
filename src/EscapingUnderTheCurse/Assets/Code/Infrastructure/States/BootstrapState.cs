@@ -1,12 +1,12 @@
+using Code.Infrastructure.Scenes;
 using CodeBase.Infrastructure.Countdown;
 using CodeBase.Infrastructure.DIContainer;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Injector;
 using CodeBase.Infrastructure.PersistentProgress;
 using CodeBase.Infrastructure.SaveLoad;
-using CodeBase.Infrastructure.Scene;
 
-namespace CodeBase.Infrastructure.States
+namespace Code.Infrastructure.States
 {
   public class BootstrapState : IState
   {

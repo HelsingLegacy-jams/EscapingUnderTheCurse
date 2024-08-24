@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Infrastructure.States
+﻿namespace Code.Infrastructure.States
 {
   public interface IState
   {

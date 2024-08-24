@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using Code.Infrastructure.Scenes;
 using CodeBase.Infrastructure.DIContainer;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Injector;
 using CodeBase.Infrastructure.PersistentProgress;
 using CodeBase.Infrastructure.SaveLoad;
-using CodeBase.Infrastructure.Scene;
 using CodeBase.UI;
 
-namespace CodeBase.Infrastructure.States
+namespace Code.Infrastructure.States
 {
   public class GameStateMachine
   {

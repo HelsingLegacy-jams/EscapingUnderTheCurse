@@ -1,5 +1,5 @@
+using Code.Infrastructure.States;
 using CodeBase.UI;
-using CodeBase.Infrastructure.States;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.Bootstrap

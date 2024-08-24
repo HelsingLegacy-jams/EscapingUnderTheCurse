@@ -4,9 +4,9 @@ using CodeBase.Infrastructure.Bootstrap;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace CodeBase.Infrastructure.Scene
+namespace Code.Infrastructure.Scenes
 {
-  public class SceneLoader
+  public class SceneLoader : ISceneLoader
   {
     private readonly ICoroutineRunner _coroutineRunner;
 

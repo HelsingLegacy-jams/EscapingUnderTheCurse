@@ -1,12 +1,12 @@
-﻿using CodeBase.Data;
+﻿using Code.Infrastructure.Scenes;
+using CodeBase.Data;
 using CodeBase.Extensions;
 using CodeBase.Infrastructure.PersistentProgress;
 using CodeBase.Infrastructure.SaveLoad;
-using CodeBase.Infrastructure.Scene;
 using CodeBase.UI;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.States
+namespace Code.Infrastructure.States
 {
   public class LoadProgressState : IState
   {

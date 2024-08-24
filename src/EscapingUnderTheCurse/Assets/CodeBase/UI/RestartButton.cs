@@ -1,5 +1,5 @@
-﻿using CodeBase.Infrastructure.Bootstrap;
-using CodeBase.Infrastructure.States;
+﻿using Code.Infrastructure.States;
+using CodeBase.Infrastructure.Bootstrap;
 using UnityEngine;
 using UnityEngine.EventSystems;
 

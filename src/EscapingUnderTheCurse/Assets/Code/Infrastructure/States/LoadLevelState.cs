@@ -2,11 +2,10 @@
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Injector;
 using CodeBase.Infrastructure.PersistentProgress;
-using CodeBase.Infrastructure.SaveLoad;
 using CodeBase.UI;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.States
+namespace Code.Infrastructure.States
 {
   public class LoadLevelState : IState
   {
