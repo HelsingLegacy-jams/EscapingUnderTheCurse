@@ -1,4 +1,6 @@
 ﻿using Code.Infrastructure.Scenes;
+using Code.Infrastructure.States.StateMachine;
+using Code.UI;
 using CodeBase.UI;
 using UnityEngine;
 
@@ -6,11 +8,11 @@ namespace Code.Infrastructure.States
 {
   public class RestartState : IState
   {
-    private readonly SceneLoader _sceneLoader;
+    private readonly ISceneLoader _sceneLoader;
     private readonly GameStateMachine _stateMachine;
     private readonly LoadingCurtain _curtain;
 
-    public RestartState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCurtain curtain)
+    public RestartState(GameStateMachine stateMachine, ISceneLoader sceneLoader, LoadingCurtain curtain)
     {
       _stateMachine = stateMachine;
       _sceneLoader = sceneLoader;

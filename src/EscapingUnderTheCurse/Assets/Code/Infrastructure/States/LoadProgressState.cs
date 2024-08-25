@@ -1,37 +1,31 @@
 ﻿using Code.Infrastructure.Scenes;
+using Code.Infrastructure.States.StateMachine;
 using CodeBase.Data;
 using CodeBase.Extensions;
 using CodeBase.Infrastructure.PersistentProgress;
 using CodeBase.Infrastructure.SaveLoad;
-using CodeBase.UI;
 using UnityEngine;
 
 namespace Code.Infrastructure.States
 {
   public class LoadProgressState : IState
   {
-    private readonly GameStateMachine _stateMachine;
+    private readonly IGameStateMachine _stateMachine;
     private readonly IPersistentProgressService _progressService;
     private readonly ISaveLoadService _saveLoadService;
     private readonly ISceneLoader _sceneLoader;
 
-    public LoadProgressState(GameStateMachine stateMachine, ISceneLoader sceneLoader,
-      LoadingCurtain curtain, IPersistentProgressService progressService, ISaveLoadService saveLoadService)
+    public LoadProgressState(IGameStateMachine stateMachine, ISceneLoader sceneLoader, IPersistentProgressService progressService, ISaveLoadService saveLoadService)
     {
       _stateMachine = stateMachine;
       _sceneLoader = sceneLoader;
-      _curtain = curtain;
       _progressService = progressService;
       _saveLoadService = saveLoadService;
     }
 
-    private readonly LoadingCurtain _curtain;
-
 
     public void Enter()
     {
-      _curtain.Show();
-      
       _sceneLoader.Load("Main", OnLoaded);
     }
 
