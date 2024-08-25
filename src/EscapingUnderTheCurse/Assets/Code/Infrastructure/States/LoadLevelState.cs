@@ -3,7 +3,6 @@ using Code.UI;
 using CodeBase.CameraLogic;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.PersistentProgress;
-using CodeBase.UI;
 using UnityEngine;
 
 namespace Code.Infrastructure.States
