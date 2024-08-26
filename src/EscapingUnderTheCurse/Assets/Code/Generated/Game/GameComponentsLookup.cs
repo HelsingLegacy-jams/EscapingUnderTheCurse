@@ -8,15 +8,30 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
+    public const int Hero = 0;
+    public const int Direction = 1;
+    public const int HeroMover = 2;
+    public const int MovementAvailable = 3;
+    public const int Moving = 4;
+    public const int Speed = 5;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 6;
 
     public static readonly string[] componentNames = {
-
+        "Hero",
+        "Direction",
+        "HeroMover",
+        "MovementAvailable",
+        "Moving",
+        "Speed"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(Code.Features.Hero.Hero),
+        typeof(Code.Features.Movement.Direction),
+        typeof(Code.Features.Movement.HeroMoverComponent),
+        typeof(Code.Features.Movement.MovementAvailable),
+        typeof(Code.Features.Movement.Moving),
+        typeof(Code.Features.Movement.Speed)
     };
 }
