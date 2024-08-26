@@ -12,8 +12,7 @@ namespace Code.Infrastructure.View
       var entity = CreateEntity
           .Empty()
         ;
-
-
+      
       EntityView.SetEntity(entity);
     }
   }
