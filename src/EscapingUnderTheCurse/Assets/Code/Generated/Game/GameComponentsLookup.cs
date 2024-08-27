@@ -8,16 +8,22 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Hero = 0;
-    public const int Direction = 1;
-    public const int HeroMover = 2;
-    public const int MovementAvailable = 3;
-    public const int Moving = 4;
-    public const int Speed = 5;
+    public const int View = 0;
+    public const int ViewPath = 1;
+    public const int ViewPrefab = 2;
+    public const int Hero = 3;
+    public const int Direction = 4;
+    public const int HeroMover = 5;
+    public const int MovementAvailable = 6;
+    public const int Moving = 7;
+    public const int Speed = 8;
 
-    public const int TotalComponents = 6;
+    public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
+        "View",
+        "ViewPath",
+        "ViewPrefab",
         "Hero",
         "Direction",
         "HeroMover",
@@ -27,6 +33,9 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(Code.Common.View),
+        typeof(Code.Common.ViewPath),
+        typeof(Code.Common.ViewPrefab),
         typeof(Code.Features.Hero.Hero),
         typeof(Code.Features.Movement.Direction),
         typeof(Code.Features.Movement.HeroMoverComponent),
