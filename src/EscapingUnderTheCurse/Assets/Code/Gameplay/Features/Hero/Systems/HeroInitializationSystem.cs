@@ -6,7 +6,12 @@ namespace Code.Gameplay.Features.Hero.Systems
 {
   public class HeroInitializationSystem : IInitializeSystem
   {
-    private IHeroFactory _heroFactory;
+    private readonly IHeroFactory _heroFactory;
+
+    public HeroInitializationSystem(IHeroFactory heroFactory)
+    {
+      _heroFactory = heroFactory;
+    }
 
     public void Initialize()
     {

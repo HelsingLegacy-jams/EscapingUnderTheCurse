@@ -1,17 +1,22 @@
 ﻿using Code.Gameplay.Features;
 using Code.Infrastructure.Factory;
 using UnityEngine;
+using Zenject;
 
 namespace Code.Infrastructure
 {
   public class EcsRunner : MonoBehaviour
   {
-    private ISystemFactory systems;
+    private ISystemFactory _systems;
     private BattleFeature _battleFeature;
-    
+
+    [Inject]
+    public void Construct(ISystemFactory systems) => 
+      _systems = systems;
+
     private void Start()
     {
-      _battleFeature = systems.Create<BattleFeature>();
+      _battleFeature = _systems.Create<BattleFeature>();
       _battleFeature.Initialize();
     }
 

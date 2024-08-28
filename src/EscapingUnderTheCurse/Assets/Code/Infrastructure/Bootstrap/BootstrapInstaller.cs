@@ -21,6 +21,7 @@ namespace Code.Infrastructure.Bootstrap
     public override void InstallBindings()
     {
       BindCurtain();
+      BindContexts();
       BindInfrastructure();
       BindAssetManagement();
       BindProgress();
@@ -38,6 +39,13 @@ namespace Code.Infrastructure.Bootstrap
     {
       LoadingCurtain curtain = Container.InstantiatePrefabForComponent<LoadingCurtain>(Curtain);
       Container.Bind<LoadingCurtain>().FromInstance(curtain).AsSingle();
+    }
+
+    private void BindContexts()
+    {
+      Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
+
+      Container.Bind<GameContext>().FromInstance(Contexts.sharedInstance.game).AsSingle();
     }
 
     private void BindInfrastructure()
