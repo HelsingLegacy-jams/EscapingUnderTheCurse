@@ -1,7 +1,7 @@
-﻿using Code.Features.Hero.Behaviours;
+﻿using Code.Gameplay.Features.Hero.Behaviours;
 using Entitas;
 
-namespace Code.Features.Movement
+namespace Code.Gameplay.Features.Movement
 {
   [Game] public class Moving : IComponent {}
   [Game] public class MovementAvailable : IComponent {}

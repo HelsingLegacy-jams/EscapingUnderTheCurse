@@ -33,21 +33,21 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Features.Movement.HeroMoverComponent heroMover { get { return (Code.Features.Movement.HeroMoverComponent)GetComponent(GameComponentsLookup.HeroMover); } }
-    public Code.Features.Hero.Behaviours.HeroMover HeroMover { get { return heroMover.Value; } }
+    public Code.Gameplay.Features.Movement.HeroMoverComponent heroMover { get { return (Code.Gameplay.Features.Movement.HeroMoverComponent)GetComponent(GameComponentsLookup.HeroMover); } }
+    public Code.Gameplay.Features.Hero.Behaviours.HeroMover HeroMover { get { return heroMover.Value; } }
     public bool hasHeroMover { get { return HasComponent(GameComponentsLookup.HeroMover); } }
 
-    public GameEntity AddHeroMover(Code.Features.Hero.Behaviours.HeroMover newValue) {
+    public GameEntity AddHeroMover(Code.Gameplay.Features.Hero.Behaviours.HeroMover newValue) {
         var index = GameComponentsLookup.HeroMover;
-        var component = (Code.Features.Movement.HeroMoverComponent)CreateComponent(index, typeof(Code.Features.Movement.HeroMoverComponent));
+        var component = (Code.Gameplay.Features.Movement.HeroMoverComponent)CreateComponent(index, typeof(Code.Gameplay.Features.Movement.HeroMoverComponent));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
     }
 
-    public GameEntity ReplaceHeroMover(Code.Features.Hero.Behaviours.HeroMover newValue) {
+    public GameEntity ReplaceHeroMover(Code.Gameplay.Features.Hero.Behaviours.HeroMover newValue) {
         var index = GameComponentsLookup.HeroMover;
-        var component = (Code.Features.Movement.HeroMoverComponent)CreateComponent(index, typeof(Code.Features.Movement.HeroMoverComponent));
+        var component = (Code.Gameplay.Features.Movement.HeroMoverComponent)CreateComponent(index, typeof(Code.Gameplay.Features.Movement.HeroMoverComponent));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

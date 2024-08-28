@@ -1,4 +1,5 @@
 ﻿using Code.Common.Entity;
+using Code.Gameplay.Features.Movement;
 using UnityEngine;
 
 namespace Code.Infrastructure.View
@@ -11,6 +12,9 @@ namespace Code.Infrastructure.View
     {
       var entity = CreateEntity
           .Empty()
+          .AddView(EntityView)
+          .AddSpeed(5)
+          .AddDirection(MovingDirection.Right)
         ;
       
       EntityView.SetEntity(entity);

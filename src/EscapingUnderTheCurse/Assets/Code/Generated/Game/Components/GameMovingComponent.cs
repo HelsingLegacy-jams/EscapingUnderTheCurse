@@ -33,7 +33,7 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Features.Movement.Moving movingComponent = new Code.Features.Movement.Moving();
+    static readonly Code.Gameplay.Features.Movement.Moving movingComponent = new Code.Gameplay.Features.Movement.Moving();
 
     public bool isMoving {
         get { return HasComponent(GameComponentsLookup.Moving); }

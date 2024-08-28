@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-namespace Code.Features.Movement.Systems
+namespace Code.Gameplay.Features.Movement.Systems
 {
   public class HeroMoveSystem : IExecuteSystem
   {

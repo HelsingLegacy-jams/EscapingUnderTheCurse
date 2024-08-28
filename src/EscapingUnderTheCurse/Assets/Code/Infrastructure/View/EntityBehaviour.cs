@@ -2,7 +2,7 @@
 
 namespace Code.Infrastructure.View
 {
-  public class EntityBehaviour : MonoBehaviour
+  public class EntityBehaviour : MonoBehaviour, IEntityView
   {
     private GameEntity _entity;
 

@@ -1,4 +1,4 @@
-﻿using Code.Features.Movement;
+﻿using Code.Gameplay.Features.Movement;
 using CodeBase.Data;
 using CodeBase.Extensions;
 using CodeBase.Infrastructure.PersistentProgress;

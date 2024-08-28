@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Code.Features.Hero.Behaviours
+namespace Code.Gameplay.Features.Hero.Behaviours
 {
   public class HeroMover : MonoBehaviour
   {

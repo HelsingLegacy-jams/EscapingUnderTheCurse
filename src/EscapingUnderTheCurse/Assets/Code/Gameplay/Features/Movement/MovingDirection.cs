@@ -1,4 +1,4 @@
-﻿namespace Code.Features.Movement
+﻿namespace Code.Gameplay.Features.Movement
 {
   public enum MovingDirection
   {
