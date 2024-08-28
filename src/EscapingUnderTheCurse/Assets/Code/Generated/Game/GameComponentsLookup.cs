@@ -12,11 +12,11 @@ public static class GameComponentsLookup {
     public const int ViewPath = 1;
     public const int ViewPrefab = 2;
     public const int Id = 3;
-    public const int Transform = 4;
-    public const int WorldPosition = 5;
-    public const int Hero = 6;
-    public const int Direction = 7;
-    public const int HeroMover = 8;
+    public const int Rigidbody2D = 4;
+    public const int Transform = 5;
+    public const int WorldPosition = 6;
+    public const int Hero = 7;
+    public const int Direction = 8;
     public const int MovementAvailable = 9;
     public const int Moving = 10;
     public const int Speed = 11;
@@ -28,11 +28,11 @@ public static class GameComponentsLookup {
         "ViewPath",
         "ViewPrefab",
         "Id",
+        "Rigidbody2D",
         "Transform",
         "WorldPosition",
         "Hero",
         "Direction",
-        "HeroMover",
         "MovementAvailable",
         "Moving",
         "Speed"
@@ -43,11 +43,11 @@ public static class GameComponentsLookup {
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab),
         typeof(Code.Gameplay.Common.Id),
+        typeof(Code.Gameplay.Common.Rigidbody2DComponent),
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Movement.Direction),
-        typeof(Code.Gameplay.Features.Movement.HeroMoverComponent),
         typeof(Code.Gameplay.Features.Movement.MovementAvailable),
         typeof(Code.Gameplay.Features.Movement.Moving),
         typeof(Code.Gameplay.Features.Movement.Speed)

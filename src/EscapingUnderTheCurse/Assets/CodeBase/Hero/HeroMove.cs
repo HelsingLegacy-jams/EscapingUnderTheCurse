@@ -61,7 +61,6 @@ namespace CodeBase.Hero
     {
       Vector3 savedPosition = progress.Position.AsUnityVector();
       transform.position = savedPosition.AddY();
-      
     }
 
     public void SwitchOff() => 

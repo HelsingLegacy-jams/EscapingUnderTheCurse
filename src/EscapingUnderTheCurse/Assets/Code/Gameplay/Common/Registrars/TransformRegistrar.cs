@@ -1,4 +1,4 @@
-﻿using Code.Infrastructure.View;
+﻿using Code.Infrastructure.View.Registrars;
 
 namespace Code.Gameplay.Common.Registrars
 {
@@ -12,7 +12,5 @@ namespace Code.Gameplay.Common.Registrars
       if(Entity.hasTransform)
         Entity.RemoveTransform();
     }
-
-    
   }
 }

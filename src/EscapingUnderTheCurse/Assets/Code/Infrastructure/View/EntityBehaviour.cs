@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Code.Infrastructure.View.Registrars;
+using UnityEngine;
 
 namespace Code.Infrastructure.View
 {
