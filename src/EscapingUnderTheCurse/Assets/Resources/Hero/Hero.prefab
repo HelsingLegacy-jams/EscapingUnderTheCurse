@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3016817695275506231}
   - component: {fileID: 1795599363682511760}
   - component: {fileID: 8461502982224020616}
+  - component: {fileID: 4248290918544381231}
   - component: {fileID: 8585602365112956562}
   - component: {fileID: 8194578353003269664}
-  - component: {fileID: 6969892996061959179}
   - component: {fileID: 8275186807187966582}
   m_Layer: 9
   m_Name: Hero
@@ -102,6 +102,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4248290918544381231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253714460007300279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 74133295268635c4fb296d4bb1f319ec, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &8585602365112956562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,22 +157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 8585602365112956562}
---- !u!114 &6969892996061959179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253714460007300279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 882d96c56a244e0b85e6f248a1cf5ce5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 300
-  MoveDirection: 1
-  JumpHeight: 8
-  Direction: 1
 --- !u!114 &8275186807187966582
 MonoBehaviour:
   m_ObjectHideFlags: 0
