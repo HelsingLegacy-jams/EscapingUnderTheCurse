@@ -1,4 +1,5 @@
-﻿using Code.Gameplay.Features.Hero.Factory;
+﻿using Code.Gameplay.Common.Time;
+using Code.Gameplay.Features.Hero.Factory;
 using Code.Infrastructure.Factory;
 using Code.Infrastructure.Scenes;
 using Code.Infrastructure.States;
@@ -24,7 +25,7 @@ namespace Code.Infrastructure.Bootstrap
       BindContexts();
       BindInfrastructure();
       BindAssetManagement();
-      BindProgress();
+      BindGameplayServices();
       BindGameplayFactories();
       BindInstaller();
     }
@@ -62,8 +63,9 @@ namespace Code.Infrastructure.Bootstrap
       Container.Bind<IGameFactory>().To<GameFactory>().AsSingle();
     }
 
-    private void BindProgress()
+    private void BindGameplayServices()
     {
+      Container.Bind<IUnityTimeService>().To<UnityTimeService>().AsSingle();
       Container.Bind<IPersistentProgressService>().To<PersistentProgressService>().AsSingle();
       Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle();
     }

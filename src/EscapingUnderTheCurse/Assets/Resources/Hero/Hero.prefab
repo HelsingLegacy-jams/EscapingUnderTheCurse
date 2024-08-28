@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8585602365112956562}
   - component: {fileID: 8194578353003269664}
   - component: {fileID: 6969892996061959179}
+  - component: {fileID: 8275186807187966582}
   m_Layer: 9
   m_Name: Hero
   m_TagString: Player
@@ -142,6 +143,20 @@ MonoBehaviour:
   MoveDirection: 1
   JumpHeight: 8
   Direction: 1
+--- !u!114 &8275186807187966582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253714460007300279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d579144362c44fea6a5293da0c7ee10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntityView: {fileID: 8585602365112956562}
+  Rigidbody: {fileID: 8461502982224020616}
 --- !u!1 &808725619174438161
 GameObject:
   m_ObjectHideFlags: 0

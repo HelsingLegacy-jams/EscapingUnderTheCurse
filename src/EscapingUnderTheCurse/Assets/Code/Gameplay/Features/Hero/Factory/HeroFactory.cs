@@ -13,6 +13,7 @@ namespace Code.Gameplay.Features.Hero.Factory
           .AddId(1)
           .AddViewPath("Hero/Hero")
           .AddWorldPosition(at)
+          .AddSpeed(500)
           .AddDirection(MovingDirection.Right)
           .With(x=>x.isHero = true)
           .With(x=>x.isMovementAvailable = true)

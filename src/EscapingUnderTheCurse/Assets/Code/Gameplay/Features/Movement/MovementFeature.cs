@@ -1,7 +1,14 @@
-﻿namespace Code.Gameplay.Features.Movement
+﻿using Code.Gameplay.Features.Movement.Systems;
+using Code.Infrastructure.Factory;
+
+namespace Code.Gameplay.Features.Movement
 {
-  public class MovementFeature : Feature
+  public sealed class MovementFeature : Feature
   {
-    
+    public MovementFeature(ISystemFactory systems)
+    {
+      Add(systems.Create<HeroMoveSystem>());
+      Add(systems.Create<HeroDirectionProviderSystem>());
+    }
   }
 }
