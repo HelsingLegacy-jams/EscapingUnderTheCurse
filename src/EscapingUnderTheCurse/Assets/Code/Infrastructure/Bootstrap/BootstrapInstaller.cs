@@ -1,8 +1,10 @@
-﻿using Code.Infrastructure.Factory;
+﻿using Code.Gameplay.Features.Hero.Factory;
+using Code.Infrastructure.Factory;
 using Code.Infrastructure.Scenes;
 using Code.Infrastructure.States;
 using Code.Infrastructure.States.Factory;
 using Code.Infrastructure.States.StateMachine;
+using Code.Infrastructure.View.Factory;
 using Code.UI;
 using CodeBase.Infrastructure.Bootstrap;
 using CodeBase.Infrastructure.Factory;
@@ -15,7 +17,7 @@ namespace Code.Infrastructure.Bootstrap
   public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunner
   {
     public LoadingCurtain Curtain;
-    
+
     public override void InstallBindings()
     {
       BindCurtain();
@@ -26,25 +28,16 @@ namespace Code.Infrastructure.Bootstrap
       BindInstaller();
     }
 
-    private void BindGameplayFactories()
+    public void Initialize()
     {
+      Container.Resolve<IStatesInitializer>().InitStates();
+      Container.Resolve<IGameStateMachine>().Enter<BootstrapState>();
     }
 
-    private void BindInstaller()
+    private void BindCurtain()
     {
-      Container.BindInterfacesTo<BootstrapInstaller>().FromInstance(this).AsSingle();
-    }
-
-    private void BindProgress()
-    {
-      Container.Bind<IPersistentProgressService>().To<PersistentProgressService>().AsSingle();
-      Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle();
-    }
-
-    private void BindAssetManagement()
-    {
-      Container.Bind<IAssets>().To<AssetProvider>().AsSingle();
-      Container.Bind<IGameFactory>().To<GameFactory>().AsSingle();
+      LoadingCurtain curtain = Container.InstantiatePrefabForComponent<LoadingCurtain>(Curtain);
+      Container.Bind<LoadingCurtain>().FromInstance(curtain).AsSingle();
     }
 
     private void BindInfrastructure()
@@ -55,17 +48,27 @@ namespace Code.Infrastructure.Bootstrap
       Container.BindInterfacesTo<GameStateMachine>().AsSingle();
     }
 
-    private void BindCurtain()
+    private void BindAssetManagement()
     {
-      LoadingCurtain curtain = Container.InstantiatePrefabForComponent<LoadingCurtain>(Curtain);
-      Container.Bind<LoadingCurtain>().FromInstance(curtain).AsSingle();
+      Container.Bind<IAssets>().To<AssetProvider>().AsSingle();
+      Container.Bind<IGameFactory>().To<GameFactory>().AsSingle();
     }
 
-
-    public void Initialize()
+    private void BindProgress()
     {
-      Container.Resolve<IStatesInitializer>().InitStates();
-      Container.Resolve<IGameStateMachine>().Enter<BootstrapState>();
+      Container.Bind<IPersistentProgressService>().To<PersistentProgressService>().AsSingle();
+      Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle();
+    }
+
+    private void BindGameplayFactories()
+    {
+      Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
+      Container.Bind<IHeroFactory>().To<HeroFactory>().AsSingle();
+    }
+
+    private void BindInstaller()
+    {
+      Container.BindInterfacesTo<BootstrapInstaller>().FromInstance(this).AsSingle();
     }
   }
 }

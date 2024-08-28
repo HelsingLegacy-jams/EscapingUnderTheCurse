@@ -10,9 +10,9 @@ namespace Code.Infrastructure.View
     
     private void Start()
     {
-      var entity = CreateEntity
-          .Empty()
-          .AddView(EntityView)
+      GameEntity entity = CreateEntity.Empty()
+          .AddId(55)
+          .AddWorldPosition(Vector2.zero)
           .AddSpeed(5)
           .AddDirection(MovingDirection.Right)
         ;

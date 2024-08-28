@@ -12,7 +12,7 @@ namespace Code.Infrastructure
     private void Start()
     {
       _battleFeature = systems.Create<BattleFeature>();
-      // _battleFeature.Initialize();
+      _battleFeature.Initialize();
     }
 
     private void Update()

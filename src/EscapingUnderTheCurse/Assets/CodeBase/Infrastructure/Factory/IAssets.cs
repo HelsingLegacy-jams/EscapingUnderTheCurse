@@ -8,5 +8,6 @@ namespace CodeBase.Infrastructure.Factory
   {
     GameObject Instantiate(string heroHero, Vector3 at);
     GameObject Instantiate(string heroHero);
+    T LoadAsset<T>(string entityViewPath) where T : Component;
   }
 }

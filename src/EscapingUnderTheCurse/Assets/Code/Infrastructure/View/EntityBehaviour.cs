@@ -25,16 +25,16 @@ namespace Code.Infrastructure.View
       _entity = null;
     }
 
-    private void UnregisterComponents()
-    {
-      foreach (var registrar in GetComponentsInChildren<IEntityComponentRegistrar>()) 
-        registrar.UnregisterComponent();
-    }
-
     private void RegisterComponents()
     {
       foreach (var registrar in GetComponentsInChildren<IEntityComponentRegistrar>()) 
         registrar.RegisterComponent();
+    }
+
+    private void UnregisterComponents()
+    {
+      foreach (var registrar in GetComponentsInChildren<IEntityComponentRegistrar>()) 
+        registrar.UnregisterComponent();
     }
   }
 }
