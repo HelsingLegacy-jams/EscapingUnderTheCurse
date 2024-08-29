@@ -1,5 +1,6 @@
 ﻿using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.Hero.Factory;
+using Code.Gameplay.Features.Hero.Provider;
 using Code.Infrastructure.Factory;
 using Code.Infrastructure.Scenes;
 using Code.Infrastructure.States;
@@ -65,6 +66,7 @@ namespace Code.Infrastructure.Bootstrap
 
     private void BindGameplayServices()
     {
+      Container.Bind<IHeroProvider>().To<HeroProvider>().AsSingle();
       Container.Bind<IUnityTimeService>().To<UnityTimeService>().AsSingle();
       Container.Bind<IPersistentProgressService>().To<PersistentProgressService>().AsSingle();
       Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle();
