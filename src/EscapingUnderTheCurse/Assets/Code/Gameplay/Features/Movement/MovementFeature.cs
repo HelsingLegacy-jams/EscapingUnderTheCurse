@@ -9,6 +9,7 @@ namespace Code.Gameplay.Features.Movement
     public MovementFeature(ISystemFactory systems)
     {
       Add(systems.Create<HeroMoveSystem>());
+      Add(systems.Create<UpdateWorldPosition>());
     }
   }
 }
