@@ -1,4 +1,5 @@
-﻿using Code.Gameplay.Features.Movement.Systems;
+﻿using Code.Gameplay.Features.Hero.Systems;
+using Code.Gameplay.Features.Movement.Systems;
 using Code.Infrastructure.Factory;
 
 namespace Code.Gameplay.Features.Movement
@@ -8,7 +9,6 @@ namespace Code.Gameplay.Features.Movement
     public MovementFeature(ISystemFactory systems)
     {
       Add(systems.Create<HeroMoveSystem>());
-      Add(systems.Create<HeroDirectionProviderSystem>());
     }
   }
 }

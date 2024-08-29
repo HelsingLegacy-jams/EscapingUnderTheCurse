@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using Code.Gameplay.Features.Movement;
 using Entitas;
 
-namespace Code.Gameplay.Features.Movement.Systems
+namespace Code.Gameplay.Features.Hero.Systems
 {
   public class HeroDirectionProviderSystem : IExecuteSystem
   {
