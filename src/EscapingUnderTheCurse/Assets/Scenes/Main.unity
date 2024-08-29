@@ -264,7 +264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 82064520}
   - component: {fileID: 82064519}
-  - component: {fileID: 82064521}
   - component: {fileID: 82064522}
   m_Layer: 10
   m_Name: Medieval_props_free_1
@@ -340,19 +339,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &82064521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82064518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741c5b9fed7749fa8281b81bb6ffa4d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DoorOpened: {fileID: 21300004, guid: ae3918a914038694d852d0bb81f62473, type: 3}
 --- !u!61 &82064522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1356,6 +1342,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 1
+--- !u!1 &796148606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796148608}
+  - component: {fileID: 796148607}
+  m_Layer: 0
+  m_Name: EcsRunner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &796148607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796148606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00928993d35e4d4a83772ae03562d1cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &796148608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796148606}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &883113101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,7 +2711,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1962665479}
   - component: {fileID: 1962665480}
-  - component: {fileID: 1962665481}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -2756,19 +2785,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1962665481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962665478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4883750e652544a29d052d36180fa6fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Doors: {fileID: 82064521}
 --- !u!1 &2108980510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,6 +3121,7 @@ Rigidbody2D:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1886712683}
   - {fileID: 519420032}
   - {fileID: 600445371}
   - {fileID: 1601765303}
@@ -3120,4 +3137,4 @@ SceneRoots:
   - {fileID: 10347104}
   - {fileID: 2108980513}
   - {fileID: 82064520}
-  - {fileID: 1886712683}
+  - {fileID: 796148608}

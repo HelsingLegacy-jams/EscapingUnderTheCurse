@@ -39,15 +39,15 @@ namespace Code.Infrastructure.States
 
     private void InitWorld()
     {
-      var initialPoint = GameObject.FindWithTag(InitialPointTag);
+      GameObject initialPoint = GameObject.FindWithTag(InitialPointTag);
       
-      GameObject hero = _gameFactory.CreateHero(initialPoint);
-      hero.GetComponent<ISavedProgress>().LoadProgress(_progressService.Progress);
+      // GameObject hero = _gameFactory.CreateHero(initialPoint);
+      // hero.GetComponent<ISavedProgress>().LoadProgress(_progressService.Progress);
       
       // _gameFactory.CreateHud();
 
-      _camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>();
-      _camera.Follow(hero);
+      // _camera = GameObject.FindWithTag("MainCamera").GetComponent<CameraFollow>();
+      // _camera.Follow(hero);
 
       _stateMachine.Enter<GameLoopState>();
     }

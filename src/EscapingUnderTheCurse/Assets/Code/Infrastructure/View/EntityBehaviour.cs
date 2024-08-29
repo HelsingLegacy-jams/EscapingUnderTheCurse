@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using Code.Infrastructure.View.Registrars;
+using UnityEngine;
 
 namespace Code.Infrastructure.View
 {
-  public class EntityBehaviour : MonoBehaviour
+  public class EntityBehaviour : MonoBehaviour, IEntityView
   {
     private GameEntity _entity;
 
@@ -11,7 +12,7 @@ namespace Code.Infrastructure.View
     public void SetEntity(GameEntity entity)
     {
       _entity = entity;
-      
+      _entity.AddView(this);
       _entity.Retain(this);
 
       RegisterComponents();
@@ -25,16 +26,16 @@ namespace Code.Infrastructure.View
       _entity = null;
     }
 
-    private void UnregisterComponents()
-    {
-      foreach (var registrar in GetComponentsInChildren<IEntityComponentRegistrar>()) 
-        registrar.UnregisterComponent();
-    }
-
     private void RegisterComponents()
     {
       foreach (var registrar in GetComponentsInChildren<IEntityComponentRegistrar>()) 
         registrar.RegisterComponent();
+    }
+
+    private void UnregisterComponents()
+    {
+      foreach (var registrar in GetComponentsInChildren<IEntityComponentRegistrar>()) 
+        registrar.UnregisterComponent();
     }
   }
 }

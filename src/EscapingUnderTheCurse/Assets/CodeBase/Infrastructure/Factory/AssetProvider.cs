@@ -15,5 +15,8 @@ namespace CodeBase.Infrastructure.Factory
       var heroPrefab = Resources.Load<GameObject>(heroHero);
       return Object.Instantiate(heroPrefab);
     }
+
+    public T LoadAsset<T>(string entityViewPath) where T : Component => 
+      Resources.Load<T>(entityViewPath);
   }
 }

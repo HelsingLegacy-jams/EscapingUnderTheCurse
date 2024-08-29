@@ -1,4 +1,4 @@
-﻿using Code.Features.Movement;
+﻿using Code.Gameplay.Features.Movement;
 using CodeBase.Data;
 using CodeBase.Extensions;
 using CodeBase.Infrastructure.PersistentProgress;
@@ -61,7 +61,6 @@ namespace CodeBase.Hero
     {
       Vector3 savedPosition = progress.Position.AsUnityVector();
       transform.position = savedPosition.AddY();
-      
     }
 
     public void SwitchOff() => 
