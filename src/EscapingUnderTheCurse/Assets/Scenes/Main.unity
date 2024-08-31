@@ -1242,6 +1242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6317575437617218310, guid: 224281db3236a9b4faac9daff6f70281, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8310006131569298830, guid: 224281db3236a9b4faac9daff6f70281, type: 3}
       propertyPath: m_Layer
       value: 15

@@ -8,7 +8,6 @@ namespace CodeBase.Hero
 {
   public class HeroMove : MonoBehaviour, ISavedProgress
   {
-    public float Speed;
     public float MoveDirection;
     public float JumpHeight;
     public MovingDirection Direction;
@@ -31,13 +30,6 @@ namespace CodeBase.Hero
       
       if (CanJump()) 
         Jump();
-
-      if (Input.GetKey(KeyCode.W))
-      {
-        var velocity = new Vector2(VelocityAxisX(), _rigidbody.velocity.y);
-        
-        _rigidbody.velocity = velocity; 
-      }
     }
 
     private void Jump() => 
@@ -45,9 +37,6 @@ namespace CodeBase.Hero
 
     private bool CanJump() => 
       Input.GetKeyDown(KeyCode.Space) && _grounding.IsGrounded;
-
-    private float VelocityAxisX() =>
-      MoveDirection * Speed * Time.deltaTime;
 
     public void UpdateProgress(PlayerProgress progress)
     {
@@ -63,9 +52,10 @@ namespace CodeBase.Hero
       transform.position = savedPosition.AddY();
     }
 
-    public void SwitchOff() => 
-      enabled = false;
-
+    
+    
+    
+    
     public void ChangeDirectionTo(MovingDirection direction)
     {
       Direction = direction;
