@@ -15,11 +15,25 @@ namespace Code.Infrastructure.View.Factory
       _assets = assets;
     }
 
-    public EntityBehaviour CreateViewForEntity(GameEntity entity, Vector2 at)
+    public EntityBehaviour CreateViewForEntityWithPath(GameEntity entity, Vector2 at)
     {
       EntityBehaviour viewPrefab = _assets.LoadAsset<EntityBehaviour>(entity.ViewPath);
       EntityBehaviour view = _instantiator.InstantiatePrefabForComponent<EntityBehaviour>(
         viewPrefab,
+        position: at,
+        Quaternion.identity,
+        parentTransform: null
+      );
+      
+      view.SetEntity(entity);
+
+      return view;
+    }
+    
+    public EntityBehaviour CreateViewForEntityWithPrefab(GameEntity entity, Vector2 at)
+    {
+      EntityBehaviour view = _instantiator.InstantiatePrefabForComponent<EntityBehaviour>(
+        entity.ViewPrefab,
         position: at,
         Quaternion.identity,
         parentTransform: null
