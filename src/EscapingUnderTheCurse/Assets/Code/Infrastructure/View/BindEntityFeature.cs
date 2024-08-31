@@ -8,6 +8,7 @@ namespace Code.Infrastructure.View
     public BindEntityFeature(ISystemFactory systems)
     {
       Add(systems.Create<BindEntityViewSystem>());
+      Add(systems.Create<BindEntityViewFromPrefabSystem>());
     }
   }
 }
