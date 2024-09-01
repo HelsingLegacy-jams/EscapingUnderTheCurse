@@ -4,18 +4,18 @@ using Entitas;
 
 namespace Code.Infrastructure.View.Systems
 {
-  public class BindEntityViewSystem : IExecuteSystem
+  public class BindEntityViewFromPrefabSystem : IExecuteSystem
   {
     private readonly IEntityViewFactory _entityViewFactory;
     private readonly IGroup<GameEntity> _entities;
     private readonly List<GameEntity> _buffer = new(64);
 
-    public BindEntityViewSystem(GameContext game, IEntityViewFactory entityViewFactory)
+    public BindEntityViewFromPrefabSystem(GameContext game, IEntityViewFactory entityViewFactory)
     {
       _entityViewFactory = entityViewFactory;
       _entities = game.GetGroup(GameMatcher
         .AllOf(
-          GameMatcher.ViewPath,
+          GameMatcher.ViewPrefab,
           GameMatcher.WorldPosition)
         .NoneOf(GameMatcher.View));
     }

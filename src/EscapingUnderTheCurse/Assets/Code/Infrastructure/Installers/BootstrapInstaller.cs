@@ -1,6 +1,7 @@
 ﻿using Code.Gameplay.Common.Time;
 using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Features.Hero.Provider;
+using Code.Gameplay.Features.Levels;
 using Code.Infrastructure.Factory;
 using Code.Infrastructure.Scenes;
 using Code.Infrastructure.States;
@@ -14,7 +15,7 @@ using CodeBase.Infrastructure.PersistentProgress;
 using CodeBase.Infrastructure.SaveLoad;
 using Zenject;
 
-namespace Code.Infrastructure.Bootstrap
+namespace Code.Infrastructure.Installers
 {
   public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunner
   {
@@ -70,6 +71,7 @@ namespace Code.Infrastructure.Bootstrap
       Container.Bind<IUnityTimeService>().To<UnityTimeService>().AsSingle();
       Container.Bind<IPersistentProgressService>().To<PersistentProgressService>().AsSingle();
       Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle();
+      Container.BindInterfacesTo<LevelDataProvider>().AsSingle();
     }
 
     private void BindGameplayFactories()
