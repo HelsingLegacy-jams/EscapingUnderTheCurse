@@ -17,6 +17,8 @@ namespace Code.Gameplay.Features.Input.Behaviours
     private void Update()
     {
       EntityBehaviour.Entity.isMoving = UnityEngine.Input.GetKey(KeyCode.W);
+      
+      EntityBehaviour.Entity.isJumping = UnityEngine.Input.GetKey(KeyCode.Space);
     }
   }
 }
