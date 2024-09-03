@@ -7,6 +7,7 @@ using Code.Infrastructure.Scenes;
 using Code.Infrastructure.States;
 using Code.Infrastructure.States.Factory;
 using Code.Infrastructure.States.StateMachine;
+using Code.Infrastructure.StaticData;
 using Code.Infrastructure.View.Factory;
 using Code.UI;
 using CodeBase.Infrastructure.Bootstrap;
@@ -67,6 +68,7 @@ namespace Code.Infrastructure.Installers
 
     private void BindGameplayServices()
     {
+      Container.BindInterfacesTo<StaticDataService>().AsSingle();
       Container.Bind<IHeroProvider>().To<HeroProvider>().AsSingle();
       Container.Bind<IUnityTimeService>().To<UnityTimeService>().AsSingle();
       Container.Bind<IPersistentProgressService>().To<PersistentProgressService>().AsSingle();

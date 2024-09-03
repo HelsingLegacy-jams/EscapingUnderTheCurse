@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Code.Gameplay.Configs;
+using UnityEngine;
 
 namespace CodeBase.Infrastructure.Factory
 {
@@ -18,5 +19,8 @@ namespace CodeBase.Infrastructure.Factory
 
     public T LoadAsset<T>(string entityViewPath) where T : Component => 
       Resources.Load<T>(entityViewPath);
+    
+    public HeroStats LoadHeroConfig(string configPath) => 
+      Resources.Load<HeroStats>(configPath);
   }
 }
