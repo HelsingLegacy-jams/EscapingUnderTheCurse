@@ -3,6 +3,7 @@
 namespace Code.Gameplay.Features.Movement
 {
   [Game] public class Moving : IComponent {}
+  [Game] public class Grounded : IComponent {}
   [Game] public class Jumping : IComponent {}
   [Game] public class MovementAvailable : IComponent {}
   
