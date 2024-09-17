@@ -1,9 +1,11 @@
-﻿using Entitas;
+﻿using Code.Gameplay.Features.Hero.Behaviours;
+using Entitas;
 
 namespace Code.Gameplay.Features.Movement
 {
   [Game] public class Moving : IComponent {}
   [Game] public class Grounded : IComponent {}
+  [Game] public class HeroGrounderComponent : IComponent { public IHeroGrounder Value; }
   [Game] public class Jumping : IComponent {}
   [Game] public class MovementAvailable : IComponent {}
   

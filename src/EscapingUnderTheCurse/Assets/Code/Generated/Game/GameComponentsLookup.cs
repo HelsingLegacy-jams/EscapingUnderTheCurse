@@ -20,13 +20,14 @@ public static class GameComponentsLookup {
     public const int Direction = 9;
     public const int DirectionModifier = 10;
     public const int Grounded = 11;
-    public const int Jumping = 12;
-    public const int JumpingForce = 13;
-    public const int MovementAvailable = 14;
-    public const int Moving = 15;
-    public const int Speed = 16;
+    public const int HeroGrounder = 12;
+    public const int Jumping = 13;
+    public const int JumpingForce = 14;
+    public const int MovementAvailable = 15;
+    public const int Moving = 16;
+    public const int Speed = 17;
 
-    public const int TotalComponents = 17;
+    public const int TotalComponents = 18;
 
     public static readonly string[] componentNames = {
         "View",
@@ -41,6 +42,7 @@ public static class GameComponentsLookup {
         "Direction",
         "DirectionModifier",
         "Grounded",
+        "HeroGrounder",
         "Jumping",
         "JumpingForce",
         "MovementAvailable",
@@ -61,6 +63,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Movement.Direction),
         typeof(Code.Gameplay.Features.Movement.DirectionModifier),
         typeof(Code.Gameplay.Features.Movement.Grounded),
+        typeof(Code.Gameplay.Features.Movement.HeroGrounderComponent),
         typeof(Code.Gameplay.Features.Movement.Jumping),
         typeof(Code.Gameplay.Features.Movement.JumpingForce),
         typeof(Code.Gameplay.Features.Movement.MovementAvailable),

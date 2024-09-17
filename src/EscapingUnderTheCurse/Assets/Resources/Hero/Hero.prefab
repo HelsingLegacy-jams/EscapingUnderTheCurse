@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -4572287303057189435}
   - component: {fileID: 149924583083220332}
   - component: {fileID: 4218594529874797491}
+  - component: {fileID: 1125443798472320015}
   m_Layer: 9
   m_Name: Hero
   m_TagString: Player
@@ -183,6 +184,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityView: {fileID: 8585602365112956562}
   Animator: {fileID: -4572287303057189435}
+--- !u!114 &1125443798472320015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253714460007300279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf37759d84145faa6d9bd57753a4d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntityView: {fileID: 8585602365112956562}
+  Grounder: {fileID: 5272166586908739379}
 --- !u!1 &808725619174438161
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9075505919899110129}
   - component: {fileID: 6337859878356026188}
+  - component: {fileID: 5272166586908739379}
   m_Layer: 9
   m_Name: GroundChecker
   m_TagString: Untagged
@@ -324,10 +340,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.041796237, y: -0.41796327}
+  m_Offset: {x: -0.040607512, y: -0.39300027}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -338,8 +354,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.30737513, y: 0.16407347}
+  m_Size: {x: 0.6663668, y: 0.114147484}
   m_EdgeRadius: 0
+--- !u!114 &5272166586908739379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757058828485765348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6f1f476dd1418eba0a7f0b9b43afc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8511457569435101287
 GameObject:
   m_ObjectHideFlags: 0
