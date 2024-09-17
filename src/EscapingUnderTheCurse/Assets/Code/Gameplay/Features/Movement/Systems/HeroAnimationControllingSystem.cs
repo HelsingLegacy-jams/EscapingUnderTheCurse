@@ -1,6 +1,4 @@
-﻿using Code.Common;
-using Code.Gameplay.Common;
-using Entitas;
+﻿using Entitas;
 
 namespace Code.Gameplay.Features.Movement.Systems
 {
@@ -20,24 +18,30 @@ namespace Code.Gameplay.Features.Movement.Systems
     {
       foreach (GameEntity hero in _heroes)
       {
-        if (hero.isMoving)
+        
+        if (hero.isMoving && hero.HeroGrounder.IsGrounded)
         {
           hero.HeroAnimator.Moving(hero.isMoving);
+          hero.HeroAnimator.Grounded(hero.HeroGrounder.IsGrounded);
           hero.HeroAnimator.VelocityAxisX(hero.Rigidbody2D.velocity.x);
         }
-        else if (!hero.Rigidbody2D.IsTouchingLayers(CollisionLayer.Ground.AsMask()))
+        
+        if (!hero.HeroGrounder.IsGrounded)
         {
           float velocityY = hero.Rigidbody2D.velocity.y;
+
           hero.HeroAnimator.VelocityAxisY(velocityY);
-          if(velocityY > 0.05)
+
+          if (velocityY > 0.05f)
             hero.HeroAnimator.JumpingUp(true);
-          else
+          else if (velocityY < 0.05f)
           {
             hero.HeroAnimator.JumpingUp(true);
             hero.HeroAnimator.FallingDown(true);
           }
         }
-        else
+        
+        if(hero.HeroGrounder.IsGrounded && !hero.isMoving)
           hero.HeroAnimator.PlayIdle();
       }
     }

@@ -9,7 +9,6 @@ namespace Code.Gameplay.Features.Hero.Behaviours
     private static readonly int VelocityAxisXHash = Animator.StringToHash("VelocityAxisX");
     private static readonly int VelocityAxisYHash = Animator.StringToHash("VelocityAxisY");
     private static readonly int MovingHash = Animator.StringToHash("isMoving");
-    private static readonly int JumpingHash = Animator.StringToHash("isJumping");
     private static readonly int GroundedHash = Animator.StringToHash("isGrounded");
     private static readonly int JumpingUpHash = Animator.StringToHash("isJumpingUp");
     private static readonly int FallingDownHash = Animator.StringToHash("isFallingDown");
@@ -17,15 +16,12 @@ namespace Code.Gameplay.Features.Hero.Behaviours
     public void Moving(bool isMoving) => 
       _animator.SetBool(MovingHash, isMoving);
 
-    public void Jumping(bool isJumping)
+    public void JumpingUp(bool isJumpingUp)
     {
-      _animator.SetBool(JumpingHash, isJumping);
-      _animator.SetBool(GroundedHash, !isJumping);
+      _animator.SetBool(JumpingUpHash, isJumpingUp);
+      _animator.SetBool(GroundedHash, !isJumpingUp);
     }
 
-    public void JumpingUp(bool isJumpingUp) => 
-      _animator.SetBool(JumpingUpHash, isJumpingUp);
-    
     public void FallingDown(bool isFalling) => 
       _animator.SetBool(FallingDownHash, isFalling);
 
@@ -38,7 +34,10 @@ namespace Code.Gameplay.Features.Hero.Behaviours
     public void PlayIdle()
     {
       _animator.SetBool(MovingHash, false);
-      
+      _animator.SetBool(GroundedHash, true);
     }
+
+    public void Grounded(bool isGrounded) => 
+      _animator.SetBool(GroundedHash, isGrounded);
   }
 }
