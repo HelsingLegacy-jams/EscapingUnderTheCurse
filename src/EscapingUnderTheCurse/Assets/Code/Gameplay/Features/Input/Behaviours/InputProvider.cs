@@ -1,4 +1,5 @@
-﻿using Code.Gameplay.Features.Hero.Provider;
+﻿using Code.Gameplay.Features.Hero;
+using Code.Gameplay.Features.Hero.Provider;
 using Code.Infrastructure.View;
 using UnityEngine;
 using Zenject;
@@ -17,8 +18,14 @@ namespace Code.Gameplay.Features.Input.Behaviours
     private void Update()
     {
       EntityBehaviour.Entity.isMoving = UnityEngine.Input.GetKey(KeyCode.W);
-      
+
       EntityBehaviour.Entity.isJumping = UnityEngine.Input.GetKey(KeyCode.Space);
+
+      if (UnityEngine.Input.GetKey(KeyCode.A) && !EntityBehaviour.Entity.isAttacking)
+      {
+        EntityBehaviour.Entity.isAttacking = true;
+        EntityBehaviour.Entity.ReplaceAttackType(AttackTypeID.Swing);
+      }
     }
   }
 }

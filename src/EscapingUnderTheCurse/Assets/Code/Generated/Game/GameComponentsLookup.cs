@@ -15,19 +15,21 @@ public static class GameComponentsLookup {
     public const int Rigidbody2D = 4;
     public const int Transform = 5;
     public const int WorldPosition = 6;
-    public const int Hero = 7;
-    public const int HeroAnimator = 8;
-    public const int Direction = 9;
-    public const int DirectionModifier = 10;
-    public const int Grounded = 11;
-    public const int HeroGrounder = 12;
-    public const int Jumping = 13;
-    public const int JumpingForce = 14;
-    public const int MovementAvailable = 15;
-    public const int Moving = 16;
-    public const int Speed = 17;
+    public const int Attacking = 7;
+    public const int AttackType = 8;
+    public const int Hero = 9;
+    public const int HeroAnimator = 10;
+    public const int Direction = 11;
+    public const int DirectionModifier = 12;
+    public const int Grounded = 13;
+    public const int HeroGrounder = 14;
+    public const int Jumping = 15;
+    public const int JumpingForce = 16;
+    public const int MovementAvailable = 17;
+    public const int Moving = 18;
+    public const int Speed = 19;
 
-    public const int TotalComponents = 18;
+    public const int TotalComponents = 20;
 
     public static readonly string[] componentNames = {
         "View",
@@ -37,6 +39,8 @@ public static class GameComponentsLookup {
         "Rigidbody2D",
         "Transform",
         "WorldPosition",
+        "Attacking",
+        "AttackType",
         "Hero",
         "HeroAnimator",
         "Direction",
@@ -58,6 +62,8 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.Rigidbody2DComponent),
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Hero.Attacking),
+        typeof(Code.Gameplay.Features.Hero.AttackType),
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Code.Gameplay.Features.Movement.Direction),

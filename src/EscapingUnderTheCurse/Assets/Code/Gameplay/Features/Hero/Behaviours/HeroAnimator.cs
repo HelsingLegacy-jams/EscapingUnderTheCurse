@@ -6,13 +6,17 @@ namespace Code.Gameplay.Features.Hero.Behaviours
   {
     [SerializeField] private Animator _animator;
 
+    private static readonly int AttackHash = Animator.StringToHash("isAttacking");
     private static readonly int VelocityAxisXHash = Animator.StringToHash("VelocityAxisX");
     private static readonly int VelocityAxisYHash = Animator.StringToHash("VelocityAxisY");
     private static readonly int MovingHash = Animator.StringToHash("isMoving");
     private static readonly int GroundedHash = Animator.StringToHash("isGrounded");
     private static readonly int JumpingUpHash = Animator.StringToHash("isJumpingUp");
     private static readonly int FallingDownHash = Animator.StringToHash("isFallingDown");
-    
+
+    public void SetAttack(bool isAttacking) => 
+      _animator.SetBool(AttackHash, isAttacking);
+
     public void Moving(bool isMoving) => 
       _animator.SetBool(MovingHash, isMoving);
 
@@ -39,5 +43,8 @@ namespace Code.Gameplay.Features.Hero.Behaviours
 
     public void Grounded(bool isGrounded) => 
       _animator.SetBool(GroundedHash, isGrounded);
+
+    public void PlayAttack(AttackTypeID attackId) => 
+      _animator.SetTrigger($"{attackId}");
   }
 }
