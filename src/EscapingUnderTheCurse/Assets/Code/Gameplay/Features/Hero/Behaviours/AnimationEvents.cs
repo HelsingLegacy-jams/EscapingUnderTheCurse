@@ -12,8 +12,11 @@ namespace Code.Gameplay.Features.Hero.Behaviours
     public void Construct(IHeroProvider provider) => 
       _hero = provider.Hero;
 
-    public void OnSwingEnd() => 
+    public void OnSwingEnd()
+    {
       _hero.HeroAnimator.SetAttack(false);
+      _hero.isProcessingAttack = false;
+    }
 
     public void OnPerformingSwing()
     {

@@ -1,5 +1,4 @@
-﻿using Code.Gameplay.Features.Hero;
-using Entitas;
+﻿using Entitas;
 
 namespace Code.Gameplay.Features.Movement.Systems
 {
@@ -24,16 +23,17 @@ namespace Code.Gameplay.Features.Movement.Systems
           hero.HeroAnimator.SetAttack(hero.isAttacking);
           hero.HeroAnimator.PlayAttack(hero.AttackType);
           hero.isAttacking = false;
+          hero.isProcessingAttack = true;
         }
         
-        else if (hero.isMoving && hero.HeroGrounder.IsGrounded)
+        else if (hero.isMoving && hero.HeroGrounder.IsGrounded && !hero.isProcessingAttack)
         {
           hero.HeroAnimator.Moving(hero.isMoving);
           hero.HeroAnimator.Grounded(hero.HeroGrounder.IsGrounded);
           hero.HeroAnimator.VelocityAxisX(hero.Rigidbody2D.velocity.x);
         }
         
-        else if (!hero.HeroGrounder.IsGrounded)
+        else if (!hero.HeroGrounder.IsGrounded && !hero.isProcessingAttack)
         {
           float velocityY = hero.Rigidbody2D.velocity.y;
 
@@ -48,7 +48,7 @@ namespace Code.Gameplay.Features.Movement.Systems
           }
         }
         
-        else if(hero.HeroGrounder.IsGrounded && !hero.isMoving)
+        else if(hero.HeroGrounder.IsGrounded && !hero.isMoving && !hero.isProcessingAttack)
           hero.HeroAnimator.PlayIdle();
       }
     }

@@ -7,6 +7,7 @@ namespace Code.Gameplay.Features.Movement
   {
     public MovementFeature(ISystemFactory systems)
     {
+      Add(systems.Create<HeroMovementAvailabilitySystem>());
       Add(systems.Create<HeroMoveSystem>());
       Add(systems.Create<HeroJumpSystem>());
       Add(systems.Create<HeroAnimationControllingSystem>());
