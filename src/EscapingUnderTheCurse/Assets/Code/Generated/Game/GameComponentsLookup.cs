@@ -15,16 +15,22 @@ public static class GameComponentsLookup {
     public const int Rigidbody2D = 4;
     public const int Transform = 5;
     public const int WorldPosition = 6;
-    public const int Hero = 7;
-    public const int Direction = 8;
-    public const int DirectionModifier = 9;
-    public const int Jumping = 10;
-    public const int JumpingForce = 11;
-    public const int MovementAvailable = 12;
-    public const int Moving = 13;
-    public const int Speed = 14;
+    public const int Attacking = 7;
+    public const int AttackType = 8;
+    public const int Hero = 9;
+    public const int HeroAnimator = 10;
+    public const int ProcessingAttack = 11;
+    public const int Direction = 12;
+    public const int DirectionModifier = 13;
+    public const int Grounded = 14;
+    public const int HeroGrounder = 15;
+    public const int Jumping = 16;
+    public const int JumpingForce = 17;
+    public const int MovementAvailable = 18;
+    public const int Moving = 19;
+    public const int Speed = 20;
 
-    public const int TotalComponents = 15;
+    public const int TotalComponents = 21;
 
     public static readonly string[] componentNames = {
         "View",
@@ -34,9 +40,15 @@ public static class GameComponentsLookup {
         "Rigidbody2D",
         "Transform",
         "WorldPosition",
+        "Attacking",
+        "AttackType",
         "Hero",
+        "HeroAnimator",
+        "ProcessingAttack",
         "Direction",
         "DirectionModifier",
+        "Grounded",
+        "HeroGrounder",
         "Jumping",
         "JumpingForce",
         "MovementAvailable",
@@ -52,9 +64,15 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.Rigidbody2DComponent),
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Hero.Attacking),
+        typeof(Code.Gameplay.Features.Hero.AttackType),
         typeof(Code.Gameplay.Features.Hero.Hero),
+        typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
+        typeof(Code.Gameplay.Features.Hero.ProcessingAttack),
         typeof(Code.Gameplay.Features.Movement.Direction),
         typeof(Code.Gameplay.Features.Movement.DirectionModifier),
+        typeof(Code.Gameplay.Features.Movement.Grounded),
+        typeof(Code.Gameplay.Features.Movement.HeroGrounderComponent),
         typeof(Code.Gameplay.Features.Movement.Jumping),
         typeof(Code.Gameplay.Features.Movement.JumpingForce),
         typeof(Code.Gameplay.Features.Movement.MovementAvailable),
